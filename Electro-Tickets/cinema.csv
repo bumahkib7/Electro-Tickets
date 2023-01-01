@@ -1,0 +1,17 @@
+Name,Logo,Description
+Cinema 1,"http://dotnethow.net/images/cinemas/cinema-1.jpeg","This is the description of the first cinema"
+Cinema 2,"http://dotnethow.net/images/cinemas/cinema-2.jpeg","This is the description of the first cinema"
+Cinema 3,"http://dotnethow.net/images/cinemas/cinema-3.jpeg","This is the description of the first cinema"
+Cinema 4,"http://dotnethow.net/images/cinemas/cinema-4.jpeg","This is the description of the first cinema"
+Cinema 5,"http://dotnethow.net/images/cinemas/cinema-5.jpeg","This is the description of the first cinema"
+
+
+
+Life,This is the Life movie description,39.50,http://dotnethow.net/images/movies/movie-3.jpeg,{DateTimeOffset.Now.AddDays(-10)},{DateTimeOffset.Now.AddDays(10)},3,3,Documentary
+The Shawshank Redemption,This is the Shawshank Redemption description,29.50,http://dotnethow.net/images/movies/movie-1.jpeg,{DateTime.Now},{DateTime.Now.AddDays(3)},2,2,Drama
+The Godfather,This is the Godfather description,29.50,http://dotnethow.net/images/movies/movie-2.jpeg,{DateTime.Now},{DateTime.Now.AddDays(3)},1,1,Drama
+Inception,This is the Inception description,29.50,http://dotnethow.net/images/movies/movie-4.jpeg,{DateTime.Now},{DateTime.Now.AddDays(3)},4,4,Sci-Fi
+Interstellar,This is the Interstellar description,29.50,http://dotnethow.net/images/movies/movie-5.jpeg,{DateTime.Now},{DateTime.Now.AddDays(3)},5,5,Sci-Fi
+
+
+

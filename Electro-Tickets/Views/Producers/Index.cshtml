@@ -1,0 +1,57 @@
+@model IEnumerable<Electro_Tickets.Models.Producer>
+@{
+  ViewData["Title"] = "Actors List";
+}
+<script>
+  function checkBioLength() {
+    const bioField = document.getElementById("Bio");
+    const errorMessage = document.getElementById("errorMessage");
+
+    if (bioField.value.length > 50) {
+      errorMessage.style.display = "block";
+      bioField.value = bioField.value.substring(0, 50);
+    } else {
+      errorMessage.style.display = "Cannot pass 50 Characters";
+    }
+  }
+</script>
+<div class="row">
+  <div class="col-md-8 offset-md-2">
+    <table>
+      <thead>
+      <tr>
+        <th style="padding: 10px; text-align: center;">@Html.DisplayNameFor(model => model.ProfilePictureURL)</th>
+        <th style="padding: 10px; text-align: center;">@Html.DisplayNameFor(model => model.FullName)</th>
+        <th style="padding: 10px; text-align: center;">@Html.DisplayNameFor(model => model.Bio)</th>
+        <th style="padding: 10px; text-align: center;">Actions</th>
+      </tr>
+      </thead>
+      <tbody>
+      @foreach (var actor in Model)
+      {
+        <tr style="border-bottom: 1px solid #ddd;">
+          <td style="word-wrap: break-word; overflow-wrap: break-word; text-align: center;">
+            <img class="rounded-circle" src="@actor.ProfilePictureURL" alt="@actor.FullName" width="100" height="100"/>
+          </td>
+          <td style="word-wrap: break-word; overflow-wrap: break-word; text-align: center;">@actor.FullName</td>
+          <td style="word-wrap: break-word; overflow-wrap: break-word; text-align: center; padding-right: 50px;">
+            @if (!string.IsNullOrEmpty(actor.Bio) && actor.Bio.Length > 50)
+            {
+              @actor.Bio.Substring(0, 50)
+            }
+            else
+            {
+              @actor.Bio
+            }
+          </td>
+          <td style="word-wrap: break-word; overflow-wrap: break-word; text-align: center;display: table-row; flex-direction: inherit; align-items: normal;">
+            <a class="btn btn-outline-primary" asp-action="Edit" asp-route-id="@actor.ProducerID"><i class="bi bi-pencil-square"></i> Edit</a> |
+            <a class="btn btn-outline-info" asp-action="Details" asp-route-id="@actor.ProducerID"><i class="bi bi-eye"></i>Details</a> |
+            <a class="btn btn-outline-danger" data-toggle="modal" data-target="#confirmModal"><i class="bi bi-trash"></i>Delete</a>
+          </td>
+        </tr>
+      }
+      </tbody>
+    </table>
+  </div>
+</div>

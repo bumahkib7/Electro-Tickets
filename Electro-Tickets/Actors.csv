@@ -1,0 +1,7 @@
+Name,Logo,Description
+Actor 1,http://dotnethow.net/images/actors/actor-1.jpeg,This is the Bio of the first actor
+Actor 2,http://dotnethow.net/images/actors/actor-2.jpeg,This is the Bio of the second actor
+Actor 3,http://dotnethow.net/images/actors/actor-3.jpeg,This is the Bio of the second actor
+Actor 4,http://dotnethow.net/images/actors/actor-4.jpeg,This is the Bio of the second actor
+Actor 5,http://dotnethow.net/images/actors/actor-5.jpeg,This is the Bio of the second actor
+Name,Description,Price,ImageURL,StartDate,EndDate,CinemaId,ProducerId,MovieCategory
